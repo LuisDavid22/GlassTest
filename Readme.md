@@ -11,4 +11,4 @@ This implementation is the one i'd use in a real world escenario given that it u
 **DocumentServiceAlternative Implementation:**
 This implementation is less performant given that it uses "Like" statements to perform the search. This implementation could be fine in the escenarios of small data storages.
 
-To choose between implementations just change the service to be injected to IDocumentService in the "Program.cs" file
+To switch between implementations just change the service to be injected to IDocumentService in the "Program.cs" file
