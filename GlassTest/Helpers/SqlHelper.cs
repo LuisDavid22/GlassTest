@@ -4,12 +4,12 @@ namespace GlassTest.Helpers
 {
     public class SqlHelper
     {
-        //public static string SplitQueryByKeywords(string query)
-        //{
-        //    var keywords = query.Split(" ");
+        public static string SplitQueryByKeywords(string query)
+        {
+            var keywords = query.Split(" ");
 
-        //    return string.Join(" OR ", keywords.Select(k => $"\"{k}\""));
-        //}
+            return string.Join(" OR ", keywords.Select(k => $"\"{k}\""));
+        }
         public static string GetLikeStatement(string columnName, string query)
         {
             var keywords = query.Split(" ");
