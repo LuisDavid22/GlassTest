@@ -23,11 +23,20 @@ namespace GlassTest.Services
 
         public List<Document> SearchDocuments(string query, bool matchAll)
         {
-            if (matchAll)
-                return GetDocumentsMatchingAll(query); //call method that return documents matching the whole query
+            try
+            {
+                if (matchAll)
+                    return GetDocumentsMatchingAll(query);
 
 
-            return GetDocumentsMatchingAny(query); //call method that return documents mathching any of the keywords
+                return GetDocumentsMatchingAny(query);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            
         }
         /// <summary>
         /// This method returns documents matching the whole query.
