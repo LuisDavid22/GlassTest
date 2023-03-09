@@ -24,8 +24,6 @@ namespace GlassTest.Controllers
 
             var documents = new List<Document>();
 
-            query = StringHelper.RemoveSpecialCharacters(query ?? string.Empty);
-
             if (string.IsNullOrWhiteSpace(query))
             {
                 documents = _documentService.SearchDocuments(); //Returns all documents
