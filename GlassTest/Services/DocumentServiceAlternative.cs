@@ -35,7 +35,7 @@ namespace GlassTest.Services
         private List<Document> GetDocumentsMatchingAll(string query)
         {
             return _dbContext.Documents
-           .Where(d => EF.Functions.Like(d.Content, $"%{query}%")).ToList();
+                    .Where(d => EF.Functions.Like(d.Content, $"%{query}%")).ToList();
         }
         /// <summary>
         /// This method returns documents mathching any of the keywords
