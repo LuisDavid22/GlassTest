@@ -17,7 +17,7 @@ namespace GlassTest.Controllers
         }
 
         [HttpGet(Name = "GetDocuments")]
-        public IActionResult Get(string query, bool matchAll)
+        public IActionResult Get(string? query, bool matchAll)
         {
             if (!ModelState.IsValid)
                 return BadRequest();
